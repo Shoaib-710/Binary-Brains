@@ -1,0 +1,16 @@
+import java.util.*;
+public class Avg{
+    public static float Total(float p,float pen,float e){
+        float Totalcost = p+pen+e;
+        return (Totalcost+((Totalcost*18)/100));
+    }
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter price of pencil,pen,eraser");
+        float pencil=sc.nextFloat();
+        float pen=sc.nextFloat();
+        float eraser=sc.nextFloat();
+
+        System.out.println("Total cost after 18% gst= "+Total(pencil,pen,eraser));
+    }
+}
