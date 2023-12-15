@@ -1,0 +1,22 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int checker = 0;  //to compare with each element
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length;i++){
+
+            //if not equal the number is missing
+            if(checker != nums[i] )
+                return checker;
+                
+            //to cover the corner case 2
+            else if (nums[nums.length-1] != nums.length)  
+                return nums.length;
+            checker++;
+        }
+        return 0;
+    }
+    public int missingNumber(String args[]){
+      int a [] = {0,1};
+      System.out.println(missingNumber(a));
+    } 
+}
