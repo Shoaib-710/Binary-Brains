@@ -1,0 +1,15 @@
+class Solution {
+    public static int largestAltitude(int[] gain) {
+        int ans [] = new int [gain.length+1];
+        ans[0] = 0;
+        for(int i=1;i<=gain.length;i++){
+            ans[i] = ans[i-1]+gain[i-1];
+        }
+        Arrays.sort(ans);
+        return ans[ans.length-1];
+    }
+    public static void main(String args[]){
+      int gain [] = {1,2,-4,122,-1};
+      System.out.println(largestAltitude(gain));
+    }
+}
